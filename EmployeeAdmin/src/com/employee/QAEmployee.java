@@ -14,8 +14,8 @@ public class QAEmployee extends Employee {
 	 * Initialize a new QA employee
 	 * @param hasPatience The 'hasPatience' of the QA employee
 	 */
-	public QAEmployee(int id, String name, String email, int age, Boolean hasPatience) {
-		super(id, name, email, age);
+	public QAEmployee(int id, String name, String email, int age, String employeeType, Boolean hasPatience) {
+		super(id, name, email, age, employeeType);
 		this.hasPatience = hasPatience;
 	}
 	
@@ -37,12 +37,12 @@ public class QAEmployee extends Employee {
 	/**
 	 *  This method is used to update the information of the QAEmployee
 	 */
-	public void updateDetails( String newName, String newEmail, int newAge, Boolean newHasPatience) {
+	public void updateDetails( String newName, String newEmail, int newAge, String newEmployeeType, Boolean newHasPatience) {
 		this.name = newName;
 		this.email = newEmail;
 		this.age = newAge;
+		this.employeeType = newEmployeeType;
 		this.hasPatience = newHasPatience;
-		
 	}
 	
 }

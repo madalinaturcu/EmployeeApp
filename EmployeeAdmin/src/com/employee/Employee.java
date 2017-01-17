@@ -11,20 +11,23 @@ public abstract class Employee {
 	protected String name;
 	protected String email;
 	protected int age;
+	protected String employeeType;
 	
 	/**
 	 * Initialize a new employee
 	 * @param name The name of the employee
 	 * @param email The email of the employee
 	 * @param age The age of the employee
+	 * @param employeeType The employeeType of the employee
 	 */
 	
-	public Employee(int id, String name, String email, int age) {
+	public Employee(int id, String name, String email, int age, String employeeType) {
 		//TODO assign the id dynamically
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.age = age;
+		this.employeeType = employeeType;
 	}
 	
 	/**
@@ -54,6 +57,21 @@ public abstract class Employee {
 	}
 	
 	/**
+	 * Set the employeeType to the employee
+	 * @param employeeType The employeeType of the employee
+	 */
+	public void setEmployeeType(String employeeType) {
+		this.employeeType = employeeType;
+	}
+	
+	/**
+	 * Get the id from the employee
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
 	 * Get the name from the employee
 	 */
 	public String getName() {
@@ -75,9 +93,9 @@ public abstract class Employee {
 	}
 	
 	/**
-	 * Get the id from the employee
+	 * Get the employeeType from the employee
 	 */
-	public int getId() {
-		return id;
+	public String getEmployeeType() {
+		return employeeType;
 	}
 }
